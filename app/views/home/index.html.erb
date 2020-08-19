@@ -1,0 +1,43 @@
+Index 
+
+<div class="container">
+   <%@post.each do |post|%>
+      <div class="post">
+         <div class = "edit">
+            <h1>제목 : <%=post.title%></h1> 
+            <a href="/home/update_form/<%=post.id%>">수정</a>
+            <a href="/home/delete/<%=post.id%>">삭제</a>
+          </div>
+          
+         <div style = "text-align:right"> 저자 : <%=post.author%></div>
+         <hr>
+         내용 : <%=post.content%>
+         <hr>
+
+
+      <%# reply %>
+      <%post.replies.each do |reply|%>
+         <div class ="reply">
+            <%=reply.content%>
+
+            <div class = "edit_reply">
+               <a href="/reply/update_form/<%=reply.id%>">수정</a>
+               <a href="/reply/delete/<%=reply.id%>">삭제</a>
+            </div>
+         </div>
+      <%end%>
+      
+      <form method="post" action="/reply/create/<%= post.id%>">  <%# dfsfsdfs %>
+         <textarea name="content" class = "form-control"></textarea>
+         <input type="submit" class ="btn btn-default" ></input>
+         
+         
+             
+         
+      </form>
+      </div>  
+   <%end%>
+    
+   <a href="/home/create_form">글쓰기</a>
+</div>
+

@@ -1,0 +1,14 @@
+
+<form method="post" action="/reply/update/<%=@reply.id%>">
+  
+  <div class="form-group">
+    <input type="text" class="form-control" name="content" value="<%=@reply.content%>"/>
+  </div>
+  
+
+   
+   <input type="submit" class = "submit" value="수정" >
+   <button type="button" class="btn btn-primary" onclick="window.history.back();">Cancel</button>
+
+   
+</form>

@@ -1,3 +1,32 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+html{
+        margin :30px;
+}
+
+.post, .reply{
+        border:1px solid;
+        margin :30px auto;
+        max-width : 1000px;
+        border-radius:5px;
+        padding : 40px;
+}    
+.edit{
+        float : left;
+}
+.edit_reply{
+        float : right;
+}
+
+.submit{
+        margin :30px;
+        
+}        
+
+.form-control{
+        max-width:1000px;
+        margin :0 auto;
+        
+}

@@ -1,2 +1,21 @@
-<h1>Home#update_form</h1>
-<p>Find me in app/views/home/update_form.html.erb</p>
+
+<form method="post" action="/home/update/<%=@post.id%>">
+  
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" name="title" value="<%=@post.title%>"/>
+  </div>
+  
+  <div class="form-group">
+    <label for="Authour">Authour</label>
+    <input type="text" class="form-control" name="author" value="<%=@post.author%>"/>
+  </div>
+  
+  <label for="Content">Content</label>
+  <textarea name="content" class ="form-control"><%=@post.content%></textarea>   
+   
+   <input type="submit" class = "submit" value="수정" >
+   <button type="button" class="btn btn-primary" onclick="window.history.back();">Cancel</button>
+
+   
+</form>
